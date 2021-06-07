@@ -1,13 +1,531 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MITTFlix</title>
-</head>
-<body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <title>Assignment #1</title>
+    <link href="main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <header class="header">
+        <a href="/"
+          ><img
+            src="https://fontmeme.com/permalink/190707/fd4735271a0d997cbe19a04408c896fc.png"
+            alt="netflix-font"
+            border="0"
+        /></a>
+        <form id="search" class="search">
+          <input type="search" placeholder="Search for a title..." value="" />
+        </form>
+      </header>
+      <div class="titleList">
+        <div class="title">
+          <h1>Movies</h1>
+          <div class="titles-wrapper">
+            <div class="movie">
+              <img
+                src="https://image.tmdb.org/t/p/w500/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg"
+                alt="Movie poster"
+              />
+              <div class="overlay">
+                <div class="title">Fight Club</div>
+                <div class="rating">8.4/10</div>
+                <div class="plot">
+                  A ticking-time-bomb insomniac and a slippery soap salesman
+                  channel primal male aggression into a shocking new form of
+                  therapy. Their concept catches on, with underground "fight
+                  clubs" forming in every town, until an eccentric gets in the
+                  way and ignites an out-of-control spiral toward oblivion.
+                </div>
+                <div data-toggled="true" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img
+                src="https://image.tmdb.org/t/p/w500/iI9c8XNdPuwB4RYbHMd62QNhoRK.jpg"
+                alt="Movie poster"
+              />
+              <div class="overlay">
+                <div class="title">Female Fight Club</div>
+                <div class="rating">5.4/10</div>
+                <div class="plot">
+                  A former fighter reluctantly returns to the life she abandoned
+                  in order to help her sister survive the sadistic world of
+                  illegal fighting and the maniac who runs it.
+                </div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img
+                src="https://image.tmdb.org/t/p/w500/zjPn7JUg2tsxlRWp4luK0YVX48Y.jpg"
+                alt="Movie poster"
+              />
+              <div class="overlay">
+                <div class="title">Superhero Fight Club</div>
+                <div class="rating">7.4/10</div>
+                <div class="plot">
+                  Oliver introduces Barry to his own little fight club which
+                  features such members as Roy Harper, Laurel Lance, Malcolm
+                  Merlyn and Ra's Al Ghul.
+                </div>
+                <div data-toggled="true" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img src="./image-not-available.jpg" alt="Movie poster" />
+              <div class="overlay">
+                <div class="title">Insane Fight Club</div>
+                <div class="rating">0/10</div>
+                <div class="plot">
+                  A group of friends have created a brand new subculture that is
+                  taking over the streets of Glasgow. They've established their
+                  very own fight club, but this is no ordinary wrestling event -
+                  this is brutal, riotous chaos. Fights don't always stay inside
+                  the ring, people are bounced off the side of buses and thrown
+                  off balconies in pubs. They now plan the biggest show of their
+                  lives. The stakes are high, will it bring them the fame and
+                  recognition they need to survive?
+                </div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img
+                src="https://image.tmdb.org/t/p/w500/aXFmWfWYCCxQTkCn7K86RvDiMHZ.jpg"
+                alt="Movie poster"
+              />
+              <div class="overlay">
+                <div class="title">Fight Club: Members Only</div>
+                <div class="rating">3.5/10</div>
+                <div class="plot">
+                  Four friends head off to Bombay and get involved in the mother
+                  and father of all gang wars.
+                </div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img
+                src="https://image.tmdb.org/t/p/w500/ipl6NdM0LwyakzLH9gKBDn8YhmZ.jpg"
+                alt="Movie poster"
+              />
+              <div class="overlay">
+                <div class="title">Lure: Teen Fight Club</div>
+                <div class="rating">3/10</div>
+                <div class="plot">
+                  A community is under siege as three Belmont Highschool coed
+                  students go missing with no trace of their whereabouts. The
+                  pressure is on the police to capture the culprits responsible.
+                  Scouring the school hallways in search of clues, undercover
+                  female detective Maggie Rawdon (Jessica Sonnerborn) enters
+                  Belmont High as a transfer student in an attempt to solve the
+                  hideous disappearance of the students. Maggie makes a few new
+                  friends, and gets invited to a private rave in the country.
+                  Just as the group begins to suspect that they've taken a wrong
+                  turn, however, the trap is sprung and Maggie finds out
+                  firsthand what fate has befallen the missing girls.
+                </div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img src="./image-not-available.jpg" alt="Movie poster" />
+              <div class="overlay">
+                <div class="title">Florence Fight Club</div>
+                <div class="rating">0/10</div>
+                <div class="plot">
+                  Four men decided to enter in the oldest Fight Club of the
+                  History, The Florentine Football tournament. A father and son,
+                  a black guy, an old champion and outsider clerk will enter in
+                  an arena of the time to win their fears, to go over their
+                  limits, to be heroes for a day.
+                </div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img src="./image-not-available.jpg" alt="Movie poster" />
+              <div class="overlay">
+                <div class="title">
+                  Insane Fight Club II - This Time It’s Personal
+                </div>
+                <div class="rating">0/10</div>
+                <div class="plot">
+                  Insane Fight Club is back. This year the boys are taking their
+                  unique form of entertainment to England as they stage fight
+                  nights in Birmingham, Leeds, Liverpool and Newcastle.
+                </div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img src="./image-not-available.jpg" alt="Movie poster" />
+              <div class="overlay">
+                <div class="title">Jurassic Fight Club</div>
+                <div class="rating">6.7/10</div>
+                <div class="plot">
+                  Jurassic Fight Club, a paleontology-based miniseries that ran
+                  for 12 episodes, depicts how prehistoric beasts hunted their
+                  prey, dissecting these battles and uncovering a predatory
+                  world far more calculated and complex than originally thought.
+                  It was hosted by George Blasing, a self-taught paleontologist.
+                </div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img src="./image-not-available.jpg" alt="Movie poster" />
+              <div class="overlay">
+                <div class="title">Girls Fight Club</div>
+                <div class="rating">0/10</div>
+                <div class="plot">
+                  The best women's wrestling competition of all time...and if
+                  you think it's fake you're in for a big surprise See LEGENDARY
+                  Mixed Martial Arts fighters coach their teams to victory in
+                  the cage! aka Chuck Lidell's Girl's Fight Club
+                </div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img
+                src="https://image.tmdb.org/t/p/w500/tZDxttt0LfgAKwvLIWyOO3fr01c.jpg"
+                alt="Movie poster"
+              />
+              <div class="overlay">
+                <div class="title">Musangwe: Fight Club</div>
+                <div class="rating">7/10</div>
+                <div class="plot">
+                  The first rule is that there are no rules. For the
+                  bare-knuckle combatants competing in Musangwe fights, anything
+                  goes - you can even put a curse on him. The sport, which dates
+                  back centuries, has become a South African institution. Any
+                  male from the age of nine to ninety can compete. We follow a
+                  group of fighters as they slug it out in the ring. Who will be
+                  this year's champion?
+                </div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img
+                src="https://image.tmdb.org/t/p/w500/4kQyWM9i2UwLcbScNeIn1YTm7HT.jpg"
+                alt="Movie poster"
+              />
+              <div class="overlay">
+                <div class="title">Fight club camp kusse</div>
+                <div class="rating">0/10</div>
+                <div class="plot"></div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img
+                src="https://image.tmdb.org/t/p/w500/yrOE92bDvzClGDpsDu8JkUssuuA.jpg"
+                alt="Movie poster"
+              />
+              <div class="overlay">
+                <div class="title">Comedy Fight Club Live</div>
+                <div class="rating">0/10</div>
+                <div class="plot"></div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img src="./image-not-available.jpg" alt="Movie poster" />
+              <div class="overlay">
+                <div class="title">Fight Club: Des Moines</div>
+                <div class="rating">0/10</div>
+                <div class="plot">
+                  What if Tyler Durden came to Des Moines, Iowa? This might be
+                  what it would look like.
+                </div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img src="./image-not-available.jpg" alt="Movie poster" />
+              <div class="overlay">
+                <div class="title">Brooklyn Girls Fight Club</div>
+                <div class="rating">7/10</div>
+                <div class="plot">
+                  From the birthplace of boxing legend Mike Tyson, young women
+                  brawl in secret fight clubs to win $1000 and invaluable street
+                  cred.
+                </div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img src="./image-not-available.jpg" alt="Movie poster" />
+              <div class="overlay">
+                <div class="title">
+                  Nixon Newell: First Female of Fight Club
+                </div>
+                <div class="rating">0/10</div>
+                <div class="plot">
+                  Since 2013, Nixon Newell has travelled the world as a
+                  professional wrestler. This is the story of her goodbye to
+                  independent wrestling.
+                </div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img
+                src="https://image.tmdb.org/t/p/w500/8pEQqVtSpgCtb7dzhR55EO1dC3l.jpg"
+                alt="Movie poster"
+              />
+              <div class="overlay">
+                <div class="title">Fight Club But With Tennis And No Fight</div>
+                <div class="rating">0/10</div>
+                <div class="plot">
+                  Drama descends upon two tennis-obsessed women as the tension
+                  moves from off the court and into the café.
+                </div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img src="./image-not-available.jpg" alt="Movie poster" />
+              <div class="overlay">
+                <div class="title">
+                  Fight Club Pro Project Mayhem VIII Night One
+                </div>
+                <div class="rating">0/10</div>
+                <div class="plot">
+                  The rivalry between Fight Club: PRO management and the
+                  Schadenfreude faction led by Tipton’s Chris Brookes ended in
+                  stunning fashion across both nights of the promotion’s eighth
+                  annual Project Mayhem weekender. Night one events followed by
+                  a second night of action.
+                </div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img src="./image-not-available.jpg" alt="Movie poster" />
+              <div class="overlay">
+                <div class="title">
+                  Fight Club Pro Project Mayhem VIII Night Two
+                </div>
+                <div class="rating">0/10</div>
+                <div class="plot">
+                  The rules saw participants enter in staggered intervals, with
+                  the last person due to enter being Wolverhampton’s Trent
+                  Seven. However the WWE superstar never made it to the ring,
+                  ultimately being thrown off the entrance stage and through a
+                  table. Fight Club: PRO wouldn’t be disadvantaged for long,
+                  with Jimmy Havoc making yet another surprise appearance at
+                  Project Mayhem, to aid the promotion. Birmingham’s Dan Moloney
+                  would ultimately secure the pinfall for Fight Club: PRO,
+                  piledriving Kyle Fletcher through a table.
+                </div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="movie">
+              <img
+                src="https://image.tmdb.org/t/p/w500/u8u3KVq0qfJYmNDsaTVOXy4So6f.jpg"
+                alt="Movie poster"
+              />
+              <div class="overlay">
+                <div class="title">Zombie Fight Club</div>
+                <div class="rating">3.5/10</div>
+                <div class="plot">
+                  It's the end of the century at a corner of the city in a
+                  building riddled with crime - Everyone in the building has
+                  turned into zombies. After Jenny's boyfriend is killed in a
+                  zombie attack, she faces the challenge of surviving in the
+                  face of adversity. In order to stay alive, she struggles with
+                  Andy to flee danger.
+                </div>
+                <div data-toggled="false" class="listToggle">
+                  <div>
+                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      !(function (e) {
+        function t(t) {
+          for (
+            var n, i, l = t[0], a = t[1], f = t[2], c = 0, s = [];
+            c < l.length;
+            c++
+          )
+            (i = l[c]),
+              Object.prototype.hasOwnProperty.call(o, i) &&
+                o[i] &&
+                s.push(o[i][0]),
+              (o[i] = 0);
+          for (n in a)
+            Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+          for (p && p(t); s.length; ) s.shift()();
+          return u.push.apply(u, f || []), r();
+        }
+        function r() {
+          for (var e, t = 0; t < u.length; t++) {
+            for (var r = u[t], n = !0, l = 1; l < r.length; l++) {
+              var a = r[l];
+              0 !== o[a] && (n = !1);
+            }
+            n && (u.splice(t--, 1), (e = i((i.s = r[0]))));
+          }
+          return e;
+        }
+        var n = {},
+          o = { 1: 0 },
+          u = [];
+        function i(t) {
+          if (n[t]) return n[t].exports;
+          var r = (n[t] = { i: t, l: !1, exports: {} });
+          return e[t].call(r.exports, r, r.exports, i), (r.l = !0), r.exports;
+        }
+        (i.m = e),
+          (i.c = n),
+          (i.d = function (e, t, r) {
+            i.o(e, t) ||
+              Object.defineProperty(e, t, { enumerable: !0, get: r });
+          }),
+          (i.r = function (e) {
+            "undefined" != typeof Symbol &&
+              Symbol.toStringTag &&
+              Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
+              Object.defineProperty(e, "__esModule", { value: !0 });
+          }),
+          (i.t = function (e, t) {
+            if ((1 & t && (e = i(e)), 8 & t)) return e;
+            if (4 & t && "object" == typeof e && e && e.__esModule) return e;
+            var r = Object.create(null);
+            if (
+              (i.r(r),
+              Object.defineProperty(r, "default", { enumerable: !0, value: e }),
+              2 & t && "string" != typeof e)
+            )
+              for (var n in e)
+                i.d(
+                  r,
+                  n,
+                  function (t) {
+                    return e[t];
+                  }.bind(null, n)
+                );
+            return r;
+          }),
+          (i.n = function (e) {
+            var t =
+              e && e.__esModule
+                ? function () {
+                    return e.default;
+                  }
+                : function () {
+                    return e;
+                  };
+            return i.d(t, "a", t), t;
+          }),
+          (i.o = function (e, t) {
+            return Object.prototype.hasOwnProperty.call(e, t);
+          }),
+          (i.p = "/");
+        var l = (this.webpackJsonpassignment1 =
+            this.webpackJsonpassignment1 || []),
+          a = l.push.bind(l);
+        (l.push = t), (l = l.slice());
+        for (var f = 0; f < l.length; f++) t(l[f]);
+        var p = a;
+        r();
+      })([]);
+    </script>
+    <script src="/static/js/2.22943a61.chunk.js"></script>
+    <script src="/static/js/main.327aea6d.chunk.js"></script>
+  </body>
 </html>
