@@ -14,6 +14,8 @@ const Header = (props) => {
         <input
           type="search"
           placeholder="Search for a title..."
+          onChange={props.handleInputCB}
+          value={props.inputText}
         />
       </form>
     </header>

@@ -11,6 +11,7 @@ class App extends Component {
     this.state = {
       movies: [],
       favourites: [],
+      inputValue: '',
     }
   }
 
@@ -60,10 +61,18 @@ class App extends Component {
     this.setState({favourites: tempArr});
   }
 
+  handleInputChange = (event) => {
+    this.setState({inputValue: event.target.value});
+  }
+
   render() { 
     return (
     <>
-      <Header handleSubmitCB={this.handleSubmit}/>
+      <Header
+        handleSubmitCB={this.handleSubmit}
+        inputText={this.state.inputValue}
+        handleInputCB={this.handleInputChange}
+      />
       <div className="titleList">
         <div className="title">
           <h1>Movies</h1>
